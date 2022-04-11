@@ -10,8 +10,6 @@ tags:
 toc: true
 toc_sticky: true
 ---
-# Docker
-
 # 1. 레지스트리에서 이미지 혹은 레포지토리를 가져오기
 
 
@@ -128,5 +126,5 @@ docker run --name [container_name] -it -d --env [ENV]=[param] [image]:[tag]
 
 
 ```python
-(1) docker exec -it [container_name] bash
+docker exec -it [container_name] bash
 ```
