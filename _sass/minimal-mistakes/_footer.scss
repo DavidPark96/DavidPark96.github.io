@@ -30,7 +30,7 @@
   }
 
   a {
-    color: inherit;
+    color: #000;
     text-decoration: none;
 
     &:hover {
@@ -42,7 +42,7 @@
   .fab,
   .far,
   .fal {
-    color: $muted-text-color;
+    color: #000;
   }
 }
 
