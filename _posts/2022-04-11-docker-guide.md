@@ -49,6 +49,25 @@ docker container run --name [container_name] --rm [IMAGE] [COMMAND] [ARG]
 docker container run -it --rm [IMAGE]
 ```
 
+## 3-3. 환경변수 옵션
+
+-e 옵션 : 환경변수 설정
+-it 옵션, bash : bash 창 실행
+
+```python
+docker run -e [ENV]=[PARAM] -it [IMAGE] bash
+```
+
+
+## 3-4. 환경변수 옵션
+
+-p 옵션 : 포트연결
+
+```python
+docker run -p [HOST_PORT]:[CONTAINER_PORT] --name [CONTAINER_NAME] [IMAGE]
+```
+
+
 # 4. 컨테이너 리스트 출력
 
 -a 옵션은 실행중이지 않은 컨테이너 전체 조회
