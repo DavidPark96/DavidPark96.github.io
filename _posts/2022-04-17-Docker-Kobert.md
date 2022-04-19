@@ -33,7 +33,7 @@ docker pull pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
 
 
 ```python
-docker run -it --gpus all --name prj_gorio pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel /bin/bash
+docker run -it -p 5000:5000 --gpus all --name [컨테이너이름] [이미지:태그]
 ```
 
 -it	Iterative Terminal. Container 종료 없이 탈출 가능.  
@@ -87,4 +87,25 @@ https://stackoverflow.com/questions/62863020/pip-freeze-generating-file-on-conda
 
 ```python
 pip list --format=freeze > requirements.txt
+```
+
+## Docker에서 flask배포시 주의
+
+```python
+포트포워딩할 것(IPv4고정), dmz할 것(super dmz하지 말 것), docker port 지정해줄 것.
+FLASK_APP=flask_app flask run --host=0.0.0.0
+```
+
+## Docker image 이름 바꾸기
+
+```python
+docker image tag [원래이름:태그] [바꿀이름:태그]
+```
+
+## Docker hub push
+
+```python
+docker login
+push할 이미지이름에 경로넣기
+docker push [이미지이름]
 ```
